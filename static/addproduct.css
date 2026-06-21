@@ -1,0 +1,81 @@
+body {
+    background-color: #fafafa;
+    color: #262626;
+    padding: 30px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 24px;
+    color: #1a1a1a;
+}
+
+form {
+    background: white;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    padding: 24px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px 12px;
+    margin-top: 6px;
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 90px;
+    resize: none;
+}
+
+input[type="file"] {
+    margin-top: 8px;
+    font-size: 13px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #0095f6;
+    color: white;
+    padding: 7px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+input[type="submit"]:hover {
+    background-color: #1877f2;
+}
+
+a[href="/product"] {
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    color: #262626;
+    padding: 8px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin-top: 16px;
+}
+
+a[href="/product"]:hover {
+    background-color: #fafafa;
+    border-color: #a8a8a8;
+}

@@ -86,6 +86,7 @@ def editproduct(request, id):
 def updateproduct(request, id):
 
     p = Product.objects.get(id=id)
+    c = Category.objects.all()
 
     if request.method == "POST":
 
@@ -100,8 +101,12 @@ def updateproduct(request, id):
             p.image = request.FILES['image']
 
         p.save()
-
-    return redirect('/product')
+        return redirect('/product')
+    
+    return render(request, 'editproduct.html', {
+        'pdata': p,
+        'cdata': c
+    })
 
 
 
