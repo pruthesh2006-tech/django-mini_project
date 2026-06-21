@@ -1,0 +1,40 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+a {
+    display: inline-block;
+    min-width: 220px;    
+    padding: 15px 20px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #555;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #555;
+    color: yellow;
+}
+
+.box-link {
+    display: inline-block;
+    width: 100px;
+    height: 45px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.box-link:hover {
+    background-color: navy;
+}

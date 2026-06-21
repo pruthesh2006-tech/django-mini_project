@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+</head>
+<body>
+    <h2>Update Product</h2>
+
+    <form method="post" action="/updateproduct/{{pdata.id}}" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    Title :
+    <input type="text" name="title" value="{{pdata.title}}">
+    <br><br>
+
+    Details :
+    <textarea name="details">{{pdata.details}}</textarea>
+    <br><br>
+
+    Price :
+    <input type="number" name="price" value="{{pdata.price}}">
+    <br><br>
+
+    Category :
+    <select name="category">
+
+        {% for i in cdata %}
+
+        <option value="{{i.id}}"
+        {% if i.id == pdata.category.id %}
+        selected
+        {% endif %}>
+            {{i}}
+        </option>
+
+        {% endfor %}
+    </select>
+
+    <br><br>
+
+    Current Image :
+    <img src="{{pdata.image.url}}" width="100">
+
+    <br><br>
+    
+    New Image :
+        <input type="file" name="image">
+        <br><br>
+        <input type="submit" value="Update Product">
+    </form>
+</body>
+</html>

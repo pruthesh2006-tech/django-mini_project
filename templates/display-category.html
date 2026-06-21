@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" 
+    href="{% static 'display-category.css'%}"/>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>CategoryName</th>
+            <th>Action</th>
+        </tr>
+        {% for c in category %}
+        <tr>
+            <td>{{c.id}}</td>
+            <td>{{c.title}}</td>
+            <td>
+                <a href="/edit-category/{{c.id}}" >Edit</a> |
+                <a href="/delete-category/{{c.id}} "
+                onclick="return confirm('Are you Sure?')">Delete</a> 
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
